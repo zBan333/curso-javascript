@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 01</title>
+</head>
+<body>
+    <input id="char" type="text"> <br>
+    <button onclick="check()">Checar</button>
+
+    <script>
+        function check(){
+            let letra = document.getElementById("char").value;
+            letra = letra.toLowerCase();
+
+            if(letra=='a' || letra=='e' || letra=='i' || letra=='o' || letra=='u'){
+            alert('vogal');
+            } else {
+                alert('consoante');
+            }
+        }
+
+    </script>
+</body>
+</html>

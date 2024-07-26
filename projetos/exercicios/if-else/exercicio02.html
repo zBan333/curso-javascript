@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 02</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando sua media</h1>
+
+    <label for="nota01">Nota 01:</label>
+    <input type="text" id="nota01" 
+        placeholder="Insira sua nota"> 
+    <br>
+    <label for="nota02">nota 02:</label>
+    <input type="text" id="nota02"
+        placeholder="Insira sua nota">
+    <br>
+    <label for="nota03">nota 03:</label>
+    <input type="text" id="nota03" 
+    placeholder="Insira sua nota">
+    <br>
+    <button onclick="media()">Calcular a sua media</button>
+
+    <script>
+        function media(){
+            let nota01 = parseFloat(document.getElementById('nota01').value);
+            let nota02 = parseFloat(document.getElementById('nota02').value);
+            let nota03 = parseFloat(document.getElementById('nota03').value);
+
+            let media = (nota01 + nota02 + nota03)/3;
+
+            if(media >= 7){
+                if(media == 10){
+                    alert('Nossa, que media bonita! Aprovado com merito');
+                } else {
+                    alert('Parabens, Aprovado na media!')
+                }
+            } 
+            else {
+                alert('Burro pra cacete heim, ta REPROVADO KKKKKKKKKKKK')
+            };
+        }
+    </script>
+</body>
+</html>

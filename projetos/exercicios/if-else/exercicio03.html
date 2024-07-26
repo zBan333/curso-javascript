@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> verificar qual dos numero é maior</h1>
+        <br>
+        <label for="numMaior1">Primeiro número: </label>
+        <input type="text" id="numMaior1">
+        <br>
+        <label for="numMaior2">Segundo número: </label>
+        <input type="text" id="numMaior2">
+        <br>
+        <label for="numMaior3">Terceiro número: </label>
+        <input type="text" id="numMaior3">
+        <br>
+        <button onclick="vefiricarmaior()">verificar</button>
+    </div>
+    <br><br><br>
+    <div>
+        <h1>verificar qual dos numeros é menor</h1>
+        <label for="numMenor1">Primeiro numero: </label>
+        <input type="text" id="numMenor1">
+        <br>
+        <label for="numMenor2">segundo numero :</label>
+        <input type="text" id="numMenor2">
+        <br>
+        <label for="numMenor3">Terceiro numero: </label>
+        <input type="text" id="numMenor3">
+        <br>
+        <button onclick="verificarMenor()">Verificar</button>
+    </div>
+
+
+    <script>
+        function vefiricarmaior(){
+            var numMaior1 = parseFloat(document.getElementById('numMaior1').value);
+            var numMaior2 = parseFloat(document.getElementById('numMaior2').value);
+            var numMaior3 = parseFloat(document.getElementById('numMaior3').value);
+            
+            if(numMaior1 > numMaior2 && numMaior1 > numMaior3){
+                alert(numMaior1);
+            } else if (numMaior2 > numMaior1 && numMaior2 > numMaior3) {
+                alert(numMaior2);
+            } else {
+                alert(numMaior3);
+            };
+            
+        };
+
+        function verificarMenor(){
+            var numMenor1 = parseFloat(document.getElementById('numMenor1').value);
+            var numMenor2 = parseFloat(document.getElementById('numMenor2').value);
+            var numMenor3 = parseFloat(document.getElementById('numMenor3').value);
+
+            if(numMenor1 < numMenor2 && numMenor1 < numMenor3){
+                alert(numMenor1);
+            } else if(numMenor2 < numMenor1 && numMenor2 < numMenor3){
+                alert(numMenor2);
+            } else {
+                alert(numMenor3);
+            }
+        };
+    </script>
+</body> 
+</html>
